@@ -795,7 +795,7 @@ namespace CSI.MES.P
             // txtStyleName
             // 
             this.txtStyleName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStyleName.Location = new System.Drawing.Point(292, 42);
+            this.txtStyleName.Location = new System.Drawing.Point(281, 42);
             this.txtStyleName.Multiline = true;
             this.txtStyleName.Name = "txtStyleName";
             this.txtStyleName.Size = new System.Drawing.Size(130, 25);
@@ -804,9 +804,9 @@ namespace CSI.MES.P
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(13, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -818,7 +818,7 @@ namespace CSI.MES.P
             // cboPo
             // 
             this.cboPo.ControlValue = null;
-            this.cboPo.Location = new System.Drawing.Point(83, 73);
+            this.cboPo.Location = new System.Drawing.Point(79, 73);
             this.cboPo.Name = "cboPo";
             this.cboPo.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPo.Properties.Appearance.Options.UseFont = true;
@@ -832,10 +832,10 @@ namespace CSI.MES.P
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(223, 73);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(216, 73);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 25);
@@ -846,7 +846,7 @@ namespace CSI.MES.P
             // cboPoItem
             // 
             this.cboPoItem.ControlValue = null;
-            this.cboPoItem.Location = new System.Drawing.Point(292, 73);
+            this.cboPoItem.Location = new System.Drawing.Point(281, 73);
             this.cboPoItem.Name = "cboPoItem";
             this.cboPoItem.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPoItem.Properties.Appearance.Options.UseFont = true;
@@ -859,13 +859,13 @@ namespace CSI.MES.P
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 42);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(32, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 25);
+            this.label1.Size = new System.Drawing.Size(46, 25);
             this.label1.TabIndex = 147;
             this.label1.Text = "Area";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -873,7 +873,7 @@ namespace CSI.MES.P
             // cboArea
             // 
             this.cboArea.ControlValue = null;
-            this.cboArea.Location = new System.Drawing.Point(83, 42);
+            this.cboArea.Location = new System.Drawing.Point(79, 42);
             this.cboArea.Name = "cboArea";
             this.cboArea.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboArea.Properties.Appearance.Options.UseFont = true;
@@ -888,7 +888,7 @@ namespace CSI.MES.P
             // 
             this.cboDate.ControlValue = null;
             this.cboDate.EditValue = null;
-            this.cboDate.Location = new System.Drawing.Point(83, 11);
+            this.cboDate.Location = new System.Drawing.Point(79, 11);
             this.cboDate.Margin = new System.Windows.Forms.Padding(2);
             this.cboDate.Name = "cboDate";
             this.cboDate.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -902,52 +902,52 @@ namespace CSI.MES.P
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(13, 11);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(38, 11);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 25);
+            this.label8.Size = new System.Drawing.Size(40, 25);
             this.label8.TabIndex = 144;
             this.label8.Text = "Date";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(223, 11);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(236, 11);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 25);
+            this.label7.Size = new System.Drawing.Size(44, 25);
             this.label7.TabIndex = 143;
             this.label7.Text = "Plant";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(433, 11);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(431, 11);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 25);
+            this.label6.Size = new System.Drawing.Size(48, 25);
             this.label6.TabIndex = 142;
             this.label6.Text = "Grade";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(223, 42);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(240, 42);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 26);
+            this.label5.Size = new System.Drawing.Size(40, 26);
             this.label5.TabIndex = 141;
             this.label5.Text = "Style";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -955,7 +955,7 @@ namespace CSI.MES.P
             // cboGrade
             // 
             this.cboGrade.ControlValue = null;
-            this.cboGrade.Location = new System.Drawing.Point(490, 11);
+            this.cboGrade.Location = new System.Drawing.Point(480, 11);
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Properties.AddEmptyRow = false;
             this.cboGrade.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -966,11 +966,12 @@ namespace CSI.MES.P
             this.cboGrade.Properties.ShowCodeColumn = false;
             this.cboGrade.Size = new System.Drawing.Size(196, 25);
             this.cboGrade.TabIndex = 12;
+            this.cboGrade.EditValueChanged += new System.EventHandler(this.cboGrade_EditValueChanged);
             // 
             // cboStyle
             // 
             this.cboStyle.ControlValue = null;
-            this.cboStyle.Location = new System.Drawing.Point(426, 42);
+            this.cboStyle.Location = new System.Drawing.Point(416, 42);
             this.cboStyle.Name = "cboStyle";
             this.cboStyle.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboStyle.Properties.Appearance.Options.UseFont = true;
@@ -985,7 +986,7 @@ namespace CSI.MES.P
             // cboPlant
             // 
             this.cboPlant.ControlValue = null;
-            this.cboPlant.Location = new System.Drawing.Point(292, 11);
+            this.cboPlant.Location = new System.Drawing.Point(281, 11);
             this.cboPlant.Name = "cboPlant";
             this.cboPlant.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPlant.Properties.Appearance.Options.UseFont = true;

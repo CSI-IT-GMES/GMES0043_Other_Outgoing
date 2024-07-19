@@ -47,8 +47,15 @@ namespace CSI.MES.P
             PrintButton = false;
             SaveButton = true;
 
-            txtStyleName.BackColor = Color.FromArgb(245, 245, 245);
-            _is_search = false; 
+            cboDate.BackColor = Color.FromArgb(255, 228, 225);
+            cboPlant.BackColor = Color.FromArgb(255, 228, 225);
+            cboGrade.BackColor = Color.FromArgb(255, 228, 225);
+            cboArea.BackColor = Color.FromArgb(255, 228, 225);
+            cboStyle.BackColor = Color.FromArgb(255, 228, 225);
+            cboPo.BackColor = Color.FromArgb(255, 228, 225);
+            cboPoItem.BackColor = Color.FromArgb(255, 228, 225);
+            txtStyleName.BackColor = Color.FromArgb(255, 228, 225);
+            _is_search = false;
 
             _firstLoad = true;
             loadControl();
@@ -80,6 +87,8 @@ namespace CSI.MES.P
                 }
 
                 frmSplash.Close();
+
+                DeleteRowButton = false;
             }
             catch
             {
@@ -122,9 +131,25 @@ namespace CSI.MES.P
         {
             try
             {
-                //GridDeleteRow(grdBase_Detail);
-                //fnSAVE_P_EPSSIP1013_U("D");
-                //QueryClick();
+                DialogResult dlr = MessageBox.Show("Bạn có muốn Xóa không?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dlr == DialogResult.Yes)
+                {
+                    bool result = SaveData("Q_DELETE");
+                    if (result)
+                    {
+                        if (gvwBase_Detail.FocusedRowHandle >= 0)
+                        {
+                            gvwBase_Detail.DeleteRow(gvwBase_Detail.FocusedRowHandle);
+                        }
+                        DeleteRowButton = false;
+                        MessageBoxW("Save successfully!", IconType.Information);
+                    }
+                    else
+                    {
+                        MessageBoxW("Save failed!", IconType.Warning);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -185,6 +210,7 @@ namespace CSI.MES.P
                 if (dlr == DialogResult.Yes)
                 {
                     bool result = SaveData("Q_SAVE");
+                    DeleteRowButton = false;
                     if (result)
                     {
                         MessageBoxW("Save successfully!", IconType.Information);
@@ -355,6 +381,29 @@ namespace CSI.MES.P
                             }
                         }
                         break;
+                    case "Q_DELETE":
+                        string V_LINE_CD = gvwBase_Detail.GetRowCellValue(gvwBase_Detail.FocusedRowHandle, "LINE_CD").ToString().Trim();
+                        string V_GRADE = gvwBase_Detail.GetRowCellValue(gvwBase_Detail.FocusedRowHandle, "GRADE_CD").ToString().Trim();
+                        string V_STYLE_CODE = gvwBase_Detail.GetRowCellValue(gvwBase_Detail.FocusedRowHandle, "STYLE_CODE").ToString().Trim();
+                        string V_AREA = gvwBase_Detail.GetRowCellValue(gvwBase_Detail.FocusedRowHandle, "AREA").ToString().Trim();
+
+                        dtData = proc.SetParamData(dtData,
+                                                    _type,
+                                                    cboDate.yyyymmdd,
+                                                    V_LINE_CD,
+                                                    V_GRADE,
+                                                    V_AREA,
+                                                    V_STYLE_CODE,
+                                                    "",
+                                                    "",
+                                                    "",
+                                                    "",
+                                                    machineName,
+                                                    "CSI.MES.PD.GMES0043A_S");
+
+                        _result = CommonProcessSave(ServiceInfo.LMESBizDB, dtData, proc.ProcName, proc.GetParamInfo(), grdBase);
+
+                        break;
                     default:
                         break;
                 }
@@ -378,6 +427,7 @@ namespace CSI.MES.P
             try
             {
                 if (grdBase_Detail.DataSource == null || gvwBase_Detail.RowCount < 1) return;
+                DeleteRowButton = true;
 
                 if (e.Clicks >= 2)
                 {
@@ -700,6 +750,14 @@ namespace CSI.MES.P
                 }
             }
             catch { }
+        }
+
+        private void cboGrade_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!_firstLoad)
+            {
+                LoadDataCbo(cboArea, "Q_AREA", "Area");
+            }
         }
 
         #endregion
