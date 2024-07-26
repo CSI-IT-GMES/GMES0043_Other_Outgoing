@@ -100,6 +100,21 @@ namespace CSI.MES.P
         {
             base.NewClick();
 
+            DataTable _dtSource = GetData("Q_VALID_DATE");
+
+            if (_dtSource != null && _dtSource.Rows.Count > 0)
+            {
+                if (_dtSource.Rows[0]["VALID_YN"].ToString().Equals("N"))
+                {
+                    MessageBox.Show("Chỉ nhập dữ liệu vào ngày hiện tại!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+
             if (cboStyle.EditValue.ToString().Equals("ALL"))
             {
                 MessageBox.Show("Style không được chọn All!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -131,6 +146,21 @@ namespace CSI.MES.P
         {
             try
             {
+                DataTable _dtSource = GetData("Q_VALID_DATE");
+
+                if (_dtSource != null && _dtSource.Rows.Count > 0)
+                {
+                    if (_dtSource.Rows[0]["VALID_YN"].ToString().Equals("N"))
+                    {
+                        MessageBox.Show("Chỉ được xóa dữ liệu của ngày hiện tại!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+
                 DialogResult dlr = MessageBox.Show("Bạn có muốn Xóa không?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dlr == DialogResult.Yes)
