@@ -80,7 +80,7 @@ namespace CSI.MES.P
 
                 DataTable _dtSource = GetData("Q");
 
-                if(_dtSource != null && _dtSource.Rows.Count > 0)
+                if (_dtSource != null && _dtSource.Rows.Count > 0)
                 {
                     SetData(grdBase_Detail, _dtSource);
                     Formart_Grid_Summary(grdBase_Detail, gvwBase_Detail);
@@ -263,10 +263,16 @@ namespace CSI.MES.P
                         gridView.Columns[i].Width = 100;
                     }
 
-                    if (gridView.Columns[i].FieldName.ToString().Equals("PO_NO") ||
-                        gridView.Columns[i].FieldName.ToString().Equals("PO_ITEM"))
+                    if (gridView.Columns[i].FieldName.ToString().Equals("PO_NO"))
                     {
                         gridView.Columns[i].Width = 120;
+                        gridView.Columns[i].Caption = "PO No.";
+                    }
+
+                    if (gridView.Columns[i].FieldName.ToString().Equals("PO_ITEM"))
+                    {
+                        gridView.Columns[i].Width = 120;
+                        gridView.Columns[i].Caption = "PO Item";
                     }
 
                     if (gridView.Columns[i].FieldName.ToString().Equals("GRADE_NAME"))
@@ -278,6 +284,7 @@ namespace CSI.MES.P
                     {
                         gridView.Columns[i].Width = 70;
                         gridView.Columns[i].DisplayFormat.FormatString = "#,#0.#";
+                        gridView.Columns[i].Caption = "Quantity";
                     }
                 }
 
